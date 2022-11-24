@@ -1,0 +1,15 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10em;
+  padding-right: 10em;
+  div:hover {
+    color: red;
+  }
+}
+
+.menu-header {
+  display: flex;
+  justify-content: center;
+}
