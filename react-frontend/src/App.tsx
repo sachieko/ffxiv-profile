@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
+import MainView from './Components/MainView';
 import Menu  from './Components/Menu';
+import { MenuProvider } from './Providers/MenuContext'
 
 function App() {
   return (
@@ -8,7 +10,10 @@ function App() {
       <header className="App-header">
         <span>App header</span>
       </header>
-    <Menu message={'This is a menu header'} menuLinks={['Link 1', 'Link 2', 'Link 3']} ></Menu>
+    <MenuProvider>
+      <Menu message={'This is a menu header'} menuLinks={['profile', 'gallery', 'ooc', 'view4']} ></Menu>
+      <MainView />
+    </MenuProvider>
     </div>
   );
 };
