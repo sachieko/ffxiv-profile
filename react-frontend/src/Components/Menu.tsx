@@ -6,8 +6,8 @@ interface MenuProps {
   menuLinks: string[];
 };
 const Menu = ({ message, menuLinks }: MenuProps) => {
-  const links: JSX.Element[] = menuLinks.map((title: string) => {
-    return <MenuButton title={title} />
+  const links: JSX.Element[] = menuLinks.map((title: string, i: number) => {
+    return <MenuButton title={title} key={i} />
   });
   return (
     <>
