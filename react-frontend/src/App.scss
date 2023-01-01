@@ -3,14 +3,14 @@
 
 * {
   box-sizing: border-box;
+  @include custom-scrollbar;
 }
 
 .App {
   height: 100vh;
   font-family: $font-regular;
   font-size: 1.5em;
-  overflow-x: hidden;
-  @include custom-scrollbar;
+  overflow: hidden;
 }
 
 .main-content {

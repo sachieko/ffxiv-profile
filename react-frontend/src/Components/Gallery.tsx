@@ -13,12 +13,12 @@ const Gallery = () => {
   const [imgFocus, setImgFocus] = useState<number | null>(null);
 
   const imageList = images.map((image: string, index: number) => {
-    return <GalleryPicture isFocus={index === imgFocus} setFocus={setImgFocus} img={image} key={index} index={index} />
+    return <GalleryPicture isFocus={false} setFocus={setImgFocus} img={image} key={index} index={index} />;
   });
 
   return (
   <div className={'gallery'}>
-    {imageList}
+    {imgFocus !== null ? <GalleryPicture isFocus={true} setFocus={setImgFocus} img={images[imgFocus]} key={imgFocus} index={imgFocus} /> : imageList}
   </div>
   );
 };

@@ -10,4 +10,6 @@
   background-size: cover;
   background: linear-gradient($bg-fade, $bg-fade), url('../img/test1.jpg');
   animation: bg-fadein 2s;
+  overflow: hidden;
+  color: $text-color;
 }
