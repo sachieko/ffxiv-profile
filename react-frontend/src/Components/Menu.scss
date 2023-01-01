@@ -9,6 +9,8 @@
   font-family: $font-title;
   font-size: 2em;
   height: 8%;
+  background-image: $menu-bg-image;
+  background-color: $menu-bg-color;
   .menu-link:hover {
     color: red;
   }
@@ -16,6 +18,8 @@
 
 .menu-header {
   display: flex;
+  background-image: $menu-bg-image;
+  background-color: $menu-bg-color;
   justify-content: center;
   font-family: $font-title;
   font-size: 3em;
