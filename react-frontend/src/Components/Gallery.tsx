@@ -5,7 +5,7 @@ import GalleryPicture from './GalleryPicture';
 
 const images: string[]= [];
 
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 20; i++) {
   images.push(sampleImage);
 }
 

@@ -1,4 +1,5 @@
 @import './styles/variables.scss';
+@import './styles/mixins';
 
 * {
   box-sizing: border-box;
@@ -8,8 +9,11 @@
   height: 100vh;
   font-family: $font-regular;
   font-size: 1.5em;
+  overflow-x: hidden;
+  @include custom-scrollbar;
 }
 
 .main-content {
-  height: inherit;
+  height: 82%;
+  background-color: $bg-color;
 }

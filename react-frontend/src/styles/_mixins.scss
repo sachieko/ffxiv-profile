@@ -1,13 +1,40 @@
 // Animation Mixins
+
+// -> Opcaity mixin. 0 to 1 for fade in
 @mixin opacity-mixin($name, $from, $to) {
   @keyframes #{$name} {
     0% {
       opacity: $from;
-      transition: opacity .5s ease-out;
-      -moz-transition: opacity .5s ease-out;
-      -webkit-transition: opacity .5s ease-out;
-      -o-transition: opacity .5s ease-out;
+      transition: opacity .5s ease-in;
+      -moz-transition: opacity .5s ease-in;
+      -webkit-transition: opacity .5s ease-in;
+      -o-transition: opacity .5s ease-in;
     }
     100% {opacity: $to;}
+  }
+}
+
+// Custom Scrollbar
+
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-track;
+    border-radius: 0.4rem;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb;
+    border-radius: 0.4rem;
+  }
+  
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $scrollbar-hover;
   }
 }

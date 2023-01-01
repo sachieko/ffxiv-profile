@@ -1,0 +1,13 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+@include opacity-mixin(bg-fadein, 0, 1);
+
+.profile {
+  background-color: teal;
+  height: 100%;
+  width: 100vw;
+  background-size: cover;
+  background: linear-gradient($bg-fade, $bg-fade), url('../img/test1.jpg');
+  animation: bg-fadein 2s;
+}

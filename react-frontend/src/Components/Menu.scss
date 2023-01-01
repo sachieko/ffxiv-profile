@@ -8,7 +8,7 @@
   padding-right: 5%;
   font-family: $font-title;
   font-size: 2em;
-
+  height: 8%;
   .menu-link:hover {
     color: red;
   }
@@ -19,4 +19,5 @@
   justify-content: center;
   font-family: $font-title;
   font-size: 3em;
+  word-break: keep-all;
 }
