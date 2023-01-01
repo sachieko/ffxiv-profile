@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import MainView from './Components/MainView';
 import Menu  from './Components/Menu';
 import { MenuProvider } from './Providers/MenuContext'

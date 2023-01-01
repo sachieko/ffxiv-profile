@@ -1,0 +1,13 @@
+@import './styles/variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+}
+
+.main-content {
+  height: inherit;
+}

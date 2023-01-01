@@ -2,19 +2,22 @@
 
 .gallery {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: wrap;
+  height: inherit;
   background-color: $image-bg-color;
+  align-content: flex-start;
   .img {
-    width: 20em;
-    padding: 5px;
-    border: $image-border;
-    background-color: $image-bg-color;
+    width: 19.5em;
+    padding: 0.2em;
+    height: auto;
     img {
       max-width: 100%;
-      height: auto;
       border-radius: 0.5em;
       border: $image-border;
+
+      &:hover {
+        box-shadow: $boxshadow-global;
+      }
     }
   }
 
@@ -31,6 +34,9 @@
       height: auto;
       border-radius: 0.5em;
       border: $image-border;
+      &:hover {
+        box-shadow: $boxshadow-global;
+      }
     }
   }
 }
