@@ -11,7 +11,7 @@ function App() {
         <span>App header</span>
       </header>
     <MenuProvider>
-      <Menu message={'Nagisa Shibata 柴田の凪沙'} menuLinks={['profile', 'gallery', 'ooc', 'view4']} ></Menu>
+      <Menu message={'Nagisa Shibata 柴田の凪沙'} menuLinks={['profile', 'gallery', 'connect', 'ooc']} ></Menu>
       <MainView />
     </MenuProvider>
     </div>

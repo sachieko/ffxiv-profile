@@ -1,7 +1,7 @@
 import Profile from "./Profile"; 
 import Gallery from "./Gallery";
 import OutOfChar from "./OutOfChar";
-import Wipview from "./Wipview";
+import Connections from "./Connections";
 import { MenuCtx } from "../Providers/MenuContext";
 
 interface IcontentView {
@@ -14,8 +14,8 @@ const MainView = () => {
   const contentView: IcontentView = {
     profile: <Profile />,
     gallery: <Gallery />,
-    ooc: <OutOfChar />,
-    view4: <Wipview />
+    connect: <Connections />,
+    ooc: <OutOfChar />
   };
 
   return (

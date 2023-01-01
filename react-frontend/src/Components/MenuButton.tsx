@@ -1,6 +1,6 @@
 import { MenuCtx } from '../Providers/MenuContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faIdCard, faImage } from '@fortawesome/free-solid-svg-icons'
+import { faIdCard, faImage, faLink } from '@fortawesome/free-solid-svg-icons'
 interface menuButtonProps {
   title: string;
 };
@@ -15,8 +15,8 @@ const MenuButton = ({ title }: menuButtonProps) => {
   const menuButtons: ImenuButtons = {
     profile: <FontAwesomeIcon icon={faIdCard} />,
     gallery: <FontAwesomeIcon icon={faImage} />,
-    ooc: 'OOC',
-    view4: 'VIEW4'
+    connect: <FontAwesomeIcon icon={faLink} />,
+    ooc: 'OOC'
   };
 
   return (
