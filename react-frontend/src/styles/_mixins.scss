@@ -1,0 +1,13 @@
+// Animation Mixins
+@mixin opacity-mixin($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      opacity: $from;
+      transition: opacity .5s ease-out;
+      -moz-transition: opacity .5s ease-out;
+      -webkit-transition: opacity .5s ease-out;
+      -o-transition: opacity .5s ease-out;
+    }
+    100% {opacity: $to;}
+  }
+}
