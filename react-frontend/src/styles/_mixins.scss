@@ -26,10 +26,14 @@
   }
 }
 
+// -> BG image transform animation. Image to image.
 @mixin bgimgswap($name, $from, $to) {
   @keyframes #{$name} {
     0% {
     background-image: url($from);
+  }
+  50% {
+      background-image: url($from);
     }
     100% {
     background-image: url($to);
