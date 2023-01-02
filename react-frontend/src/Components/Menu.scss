@@ -1,5 +1,4 @@
 @import '../styles/variables';
-@import '../styles/mixins';
 
 .menu {
   display: flex;
@@ -12,7 +11,7 @@
   height: 8%;
   background-image: $menu-bg-image;
   background-color: $menu-bg-color;
-  border-bottom: 5px ridge rgb(95, 95, 95);
+  border-bottom: 5px ridge rgb(145, 145, 145);
   .menu-link {
     background: $menu-link-bg;
     border: $menu-border;
