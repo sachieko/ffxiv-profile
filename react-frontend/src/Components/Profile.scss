@@ -24,6 +24,8 @@
       height: auto;
       border: $image-border;
       border-radius: 0.2em;
+      box-shadow: $profile-pic-sh;
+      -webkit-box-shadow: $profile-pic-sh;
     }
   }
 }

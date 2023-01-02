@@ -18,7 +18,8 @@ $placeholder-img: url('../img/test1.jpg');
 
 // Profile Variables
 $profile-bg: linear-gradient($bg-fade, $bg-fade), url('../img/test1.jpg');
-$profile-text-sh: 2px 2px 2px #000000;
+$profile-text-sh: 2px 2px 2px #ffffff;
+$profile-pic-sh: 0px 0px 10px 5px #ffffff; 
 
 // Menu Variables
 $menu-bg-image: url('../img/soft-circle-scales.png');
