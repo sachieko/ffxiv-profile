@@ -1,5 +1,6 @@
 import './Profile.scss';
 import phImage from '../img/test1.jpg';
+import ProfileMenu from './ProfileMenu';
 
 const Profile = () => {
   return (
@@ -18,9 +19,7 @@ const Profile = () => {
         <b>Server: Balmung</b><br/>
       </p>
     </div>
-    <div className={'profile-widgets'}>
-      <p>Profile Widgets</p>
-    </div>
+      <ProfileMenu />
   </div>
   );
 };
