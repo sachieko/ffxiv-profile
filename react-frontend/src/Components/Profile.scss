@@ -4,12 +4,26 @@
 @include opacity-mixin(bg-fadein, 0, 1);
 
 .profile {
-  background-color: teal;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   height: 100%;
   width: 100vw;
   background-size: cover;
-  background: linear-gradient($bg-fade, $bg-fade), url('../img/test1.jpg');
+  background: $profile-bg;
   animation: bg-fadein 2s;
   overflow: hidden;
   color: $text-color;
+  font-size: 1.3em;
+  padding: 2%;
+  .profile-info {
+    text-shadow: $profile-text-sh;
+    img {
+      width: 400px;
+      height: auto;
+      border: $image-border;
+      border-radius: 0.2em;
+    }
+  }
 }

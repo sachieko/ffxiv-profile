@@ -12,8 +12,12 @@
   background-image: $menu-bg-image;
   background-color: $menu-bg-color;
   border-bottom: 5px ridge rgb(95, 95, 95);
-  .menu-link:hover {
-    color: red;
+  .menu-link {
+    font-family: $font-menu;
+    text-shadow: $menu-link-sh;
+    &:hover {
+      text-shadow: $menu-link-hover-sh;
+    }
   }
 }
 
@@ -21,6 +25,7 @@
   display: flex;
   background-image: $menu-bg-image;
   background-color: $menu-bg-color;
+  text-shadow: $title-shadow;
   justify-content: center;
   font-family: $font-title;
   font-size: 3em;

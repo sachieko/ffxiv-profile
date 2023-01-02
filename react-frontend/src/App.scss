@@ -13,7 +13,10 @@
   overflow: hidden;
 }
 
+@include bg-color-mixin(menu-to-page-color, $menu-bg-color, $bg-color);
+
 .main-content {
   height: 82%;
   background-color: $bg-color;
+  animation: menu-to-page-color 3s;
 }

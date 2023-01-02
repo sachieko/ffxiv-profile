@@ -2,16 +2,19 @@
 @import '../styles/mixins';
 
 @include opacity-mixin(img-op-anim, 0.2, 1);
+@include bg-color-mixin(menu-to-page-color, $menu-bg-color, $bg-color);
 
 .gallery {
   display: flex;
   flex-flow: wrap;
   height: 100%;
+  padding-bottom: 10px;
   align-content: flex-start;
   @include custom-scrollbar;
   overflow-y: scroll;
-  
+  animation: menu-to-page-color 4s ease;
   .img {
+    background-image: $gallery-bg-image;
     background-color: $image-bg-color;
     width: 25%;
     padding: 0.2%;
@@ -38,9 +41,9 @@
     height: 82%;
     padding: 10px;
     border: $image-border;
-    background-image: $menu-bg-image;
-    background-color: $image-bg-color;
+    background-image: $gallery-bg-image;
     img {
+      background-color: $image-bg-color;
       max-width: 100%;
       max-height: 100%;
       border-radius: 0.5em;
