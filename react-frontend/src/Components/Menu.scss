@@ -1,9 +1,6 @@
 @import '../styles/variables';
 @import '../styles/mixins';
 
-@include resize-mixin(menu-hover-anim, 1, 1.2);
-@include resize-mixin(menu-link-anim, 1.2, 1);
-
 .menu {
   display: flex;
   flex-flow: wrap;
