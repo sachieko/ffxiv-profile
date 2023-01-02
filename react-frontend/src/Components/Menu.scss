@@ -24,9 +24,9 @@
     padding: 5px;
     font-family: $font-menu;
     text-shadow: $menu-link-sh;
-    animation: menu-link-anim 1s ease-in-out;
+    transition: all .2s ease-in-out;
     &:hover {
-      animation: menu-hover-anim 1s ease-in-out;
+      transform: scale(1.1);
       text-shadow: $menu-link-hover-sh;
     }
   }
