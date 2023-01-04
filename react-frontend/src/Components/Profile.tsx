@@ -4,7 +4,7 @@ import ProfileMenu from './ProfileMenu';
 
 const Profile = () => {
   return (
-  <div className={'profile'}>
+  <section className={'profile'}>
     <div className={'profile-info'}>
     <img src={phImage} alt='headshot' />
       <p>
@@ -20,7 +20,7 @@ const Profile = () => {
       </p>
     </div>
       <ProfileMenu />
-  </div>
+  </section>
   );
 };
 

@@ -19,7 +19,7 @@ const ProfileMenu = () => {
 
   return (
     <div className={'profile-menu'}>
-      {view ? views[view] : <div className={'widget-menu'}>Group of widgets</div>}
+      {view ? views[view] : <div className={'widget-menu'}></div>}
     </div>
   );
 };
