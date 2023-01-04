@@ -1,12 +1,12 @@
 import './Profile.scss';
-import phImage from '../img/test1.jpg';
+import profilePicture from '../img/profilepic1.jpg';
 import ProfileMenu from './ProfileMenu';
 
 const Profile = () => {
   return (
   <section className={'profile'}>
     <div className={'profile-info'}>
-    <img src={phImage} alt='headshot' />
+    <img src={profilePicture} alt='headshot' />
       <p>
         Race: Raen (Au'ra).<br/>
         Origin: Bukyo, Hingashi.<br/>

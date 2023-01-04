@@ -2,7 +2,6 @@
 @import '../styles/mixins';
 
 @include opacity-mixin(img-op-anim, 0.2, 1);
-@include bg-color-mixin(menu-to-page-color, $menu-bg-color, $bg-color);
 
 .gallery {
   display: flex;
@@ -10,8 +9,8 @@
   height: 100%;
   align-content: flex-start;
   @include custom-scrollbar;
+  background-image: $gallery-bg-image;
   overflow-y: scroll;
-  animation: menu-to-page-color 4s ease;
   .img {
     background-image: $gallery-bg-image;
     background-color: $image-bg-color;
