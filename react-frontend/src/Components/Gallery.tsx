@@ -17,9 +17,9 @@ const Gallery = () => {
   });
 
   return (
-  <div className={'gallery'}>
+  <section className={'gallery'}>
     {imgFocus !== null ? <GalleryPicture isFocus={true} setFocus={setImgFocus} img={images[imgFocus]} key={imgFocus} index={imgFocus} /> : imageList}
-  </div>
+  </section>
   );
 };
 

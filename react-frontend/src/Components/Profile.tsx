@@ -1,9 +1,10 @@
 import './Profile.scss';
 import phImage from '../img/test1.jpg';
+import ProfileMenu from './ProfileMenu';
 
 const Profile = () => {
   return (
-  <div className={'profile'}>
+  <section className={'profile'}>
     <div className={'profile-info'}>
     <img src={phImage} alt='headshot' />
       <p>
@@ -18,10 +19,8 @@ const Profile = () => {
         <b>Server: Balmung</b><br/>
       </p>
     </div>
-    <div className={'profile-widgets'}>
-      <p>Profile Widgets</p>
-    </div>
-  </div>
+      <ProfileMenu />
+  </section>
   );
 };
 
