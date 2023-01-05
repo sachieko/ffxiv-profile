@@ -1,5 +1,5 @@
 import TextPage from "./TextPage";
-import './OutOfCharacter.scss';
+import './OutOfChar.scss';
 import oocInfo from '../static/oocInfo';
 
 
