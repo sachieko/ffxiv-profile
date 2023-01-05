@@ -12,7 +12,7 @@ const MenuButton = ({ title }: menuButtonProps) => {
 
   const menuButtons: ImenuButtons = {
     profile: 'Info',
-    gallery: 'Photos',
+    gallery: 'Gallery',
     connect: 'Connect',
     ooc: 'OOC'
   };

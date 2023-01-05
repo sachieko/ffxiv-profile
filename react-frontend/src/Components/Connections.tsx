@@ -1,8 +1,10 @@
+import TextPage from "./TextPage";
+
 const Connections = () => {
 
   return (
     <div className='connect'>
-      connect page
+      <TextPage title='Connect' text='This is some information about possible RP hooks' />
     </div>
   );
 };
