@@ -1,9 +1,17 @@
 import TextPage from "./TextPage";
+import './OutOfCharacter.scss';
+import oocInfo from '../static/oocInfo';
+
 
 const OutOfChar = () => {
+
+  const oocList = oocInfo.map(infoItem => {
+    return <TextPage title={infoItem.title} text={infoItem.text} />;
+  });
+
   return (
   <div className={'ooc'}>
-    <TextPage title='Out of Character Information' text={`This is important information to know about the character's author.`} />
+    {oocList}
   </div>
   );
 };

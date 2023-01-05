@@ -1,0 +1,37 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+@include opacity-mixin(ooc-fadein, .6, 1);
+
+.ooc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  animation: ooc-fadein 1s;
+  background: $ooc-bg;
+  .text-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 1%;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: $menu-border-light;
+    background-color: $ooc-bg-color;
+    color: $text-color;
+    text-shadow: $profile-text-sh;
+    .title {
+      font-size: 2em;
+      text-shadow: $ooc-title-shadow;
+    }
+    .text {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+}
