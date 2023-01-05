@@ -2,7 +2,7 @@ interface IWidget {
   title: string;
   text: string;
   widgetName: string;
-  onClick: (a: string) => void;
+  onClick: (a: string) => void; // Used to set state view
 };
 
 const Widget = ({title, text, widgetName, onClick}: IWidget) => {
