@@ -25,13 +25,13 @@
     background-color: $ooc-bg-color;
     color: $text-color;
     text-shadow: $profile-text-sh;
+    font-weight: bold;
     .title {
       font-size: 2em;
       text-shadow: $ooc-title-shadow;
     }
     .text {
       font-size: 1.2em;
-      font-weight: bold;
     }
   }
 }

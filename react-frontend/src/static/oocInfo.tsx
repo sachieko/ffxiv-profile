@@ -1,12 +1,11 @@
 interface IoocInfoItem {
   title: string;
-  text: string;
+  text?: string;
 };
 
 const oocInfo: IoocInfoItem[] = [
   {
     title: 'Out of Character Information',
-    text: ''
   },
   {
     title: 'Separation of IC and OOC',
@@ -17,7 +16,7 @@ const oocInfo: IoocInfoItem[] = [
     title: 'My Rp Style',
     text: `I like to post variable length replies to suit the pace of scenes. Sometimes, less is more.
       Other times I do feel like describing the infinitismally small quirks and interactions of body
-      language and the environment.`
+      language and the environment. I do not mind conflict, violence, or dark themes.`
   },
   {
     title: 'Discord?',

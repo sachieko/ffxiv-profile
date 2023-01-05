@@ -31,6 +31,7 @@ const ProfileMenu = () => {
   return (
     <>
     <div className={'profile-menu'}>
+      <span>Nagisa's Path</span>
       {view ? views[view] : <div className={'widget-menu'}>{widgets}</div>}
     </div>
     </>
