@@ -44,6 +44,7 @@ const Gallery = () => {
         Authorization: `Client-ID ${clientID}`
       }
     };
+    setImages([]);
     axios.get(url, config)
       .then((res) => {
         const imageStrings: string[] = res.data.data.map((img: IimageData) => {
