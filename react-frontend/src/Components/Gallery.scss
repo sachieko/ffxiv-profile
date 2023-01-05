@@ -7,13 +7,11 @@
   display: flex;
   flex-flow: wrap;
   height: 100%;
+  padding: 10px;
   align-content: flex-start;
   @include custom-scrollbar;
-  background-image: $gallery-bg-image;
   overflow-y: scroll;
   .img {
-    background-image: $gallery-bg-image;
-    background-color: $image-bg-color;
     width: 25%;
     padding: 0.2%;
     height: auto;

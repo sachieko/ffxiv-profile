@@ -21,7 +21,7 @@
     text-shadow: $profile-text-sh;
     max-width: 50%;
     img {
-      width: 400px;
+      width: 300px;
       height: auto;
       border: $image-border;
       border-radius: 0.2em;
@@ -50,9 +50,11 @@
         justify-content: center;
         align-items: center;
         border-radius: 0.5em;
-        border: $menu-link-border;
+        border: $menu-border;
         background-color: $menu-link-bg;
-        text-shadow: $profile-text-sh;
+        background-image: $bg-img;
+        text-shadow: $profile-widget-sh;
+        color: $profile-widget-color;
         transition: all .2s ease-in-out;
         &:hover {
           transform: scale(1.1);
@@ -67,8 +69,9 @@
       align-items: center;
       width: 90%;
       border-radius: 0.5em;
-      border: $menu-link-border;
+      border: $menu-border;
       background-color: $menu-link-bg;
+      background-image: $bg-img;
       text-shadow: $profile-text-sh;
       transition: all .2s ease-in-out;
         &:hover {

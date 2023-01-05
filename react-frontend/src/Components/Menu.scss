@@ -19,6 +19,8 @@
     font-size: 1em;
     padding: 5px;
     font-family: $font-menu;
+    color:  $menu-font;
+    background-image: $bg-img;
     text-shadow: $menu-link-sh;
     transition: all .2s ease-in-out;
     &:hover {
