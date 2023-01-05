@@ -17,10 +17,10 @@
 // -> BG Color mixin. Color to Color
 @mixin bg-color-mixin($name, $from, $to) {
   @keyframes #{$name} {
-    0% {
+    from {
       background-color: $from;
     }
-    100% {
+    to {
       background-color: $to;
     }
   }

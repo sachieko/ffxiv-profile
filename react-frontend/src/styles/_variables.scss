@@ -6,9 +6,10 @@ $font-title: 'Cinzel Decorative', 'New Tegomin', cursive, sans-serif;
 $font-menu: 'Nothing You Could Do', 'New Tegomin', sans-serif;
 $font-regular: 'Nothing You Could Do', 'New Tegomin', cursive, sans-serif;
 $title-shadow: 2px 2px 2px rgb(0, 205, 205);
-$bg-color: teal;
+$bg-color: rgba(0, 71, 71, 0.8);
 $bg-fade: rgba(0, 128, 128, 0.4);
 $text-color: rgb(214, 214, 214);
+$bg-img: url('../img/white-plaster.png');
 
 $scrollbar-thumb: rgb(35, 35, 35);
 $scrollbar-track: grey;
@@ -19,21 +20,36 @@ $scrollbar-hover: rgb(87, 40, 122);
 // Profile Variables
 $profile-bg: linear-gradient($bg-fade, $bg-fade), no-repeat center/100% url('../img/background1.jpg');
 $profile-pic: url('../img/profilepic1.jpg');
+$profile-widget-sh: 2px 2px 2px #000000;
+$profile-widget-color: #ffffff;
 $profile-text-sh: 2px 2px 2px #000000;
-$profile-pic-sh: 0px 0px 10px 5px #ffffff; 
+$profile-pic-sh: 0px 0px 20px 8px #fe0033; 
 
 // Menu Variables
 $menu-bg-image: url('../img/soft-circle-scales.png');
 $menu-bg-color: rgb(87, 40, 122);
-$menu-link-sh: 2px 2px 2px #ffffff;
+$menu-link-sh: 2px 2px 2px #000000;
 $menu-link-hover-sh: 2px 2px 2px teal;
 $menu-link-bg: rgba(201, 201, 201, 0.487);
-$menu-border: 5px double #1b1b1b;
+$menu-border: 6px double #1b1b1b;
+$menu-font: #fff;
+$menu-border-light: 6px double #575757;
 $menu-link-border: 5px ridge rgb(145, 145, 145);
-
 
 // Gallery Variables
 $gallery-bg-image: url('../img/tapestry.png');
 $image-border: 1px solid #1b1b1b;
 $image-bg-color: teal;
 $image-bg-hover: grey;
+
+// Connect Variables
+$connect-bg-fade: rgba(87, 40, 122, 0.4);
+$connect-bg: linear-gradient($connect-bg-fade, $connect-bg-fade), no-repeat center/100% url('../img/background1.jpg');
+$connect-bg-color: rgba(49, 49, 49, 0.487);
+$connect-title-shadow: 2px 2px 2px rgb(125, 2, 225);
+
+// OOC Variables
+$ooc-bg-fade: rgba(43, 8, 8, 0.4);
+$ooc-bg: linear-gradient($ooc-bg-fade, $ooc-bg-fade), no-repeat center/100% url('../img/background1.jpg');
+$ooc-bg-color: rgba(49, 49, 49, 0.487);
+$ooc-title-shadow: 2px 2px 2px rgb(155, 3, 3);
