@@ -4,11 +4,11 @@
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
-  padding: 5%;
-  padding-top: 0;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-family: $font-title;
   font-size: 2em;
-  height: 8%;
   background-image: $menu-bg-image;
   background-color: $menu-bg-color;
   border-bottom: $menu-link-border;
@@ -34,9 +34,29 @@
   background-image: $menu-bg-image;
   background-color: $menu-bg-color;
   text-shadow: $title-shadow;
-  height: 10%;
   justify-content: center;
   font-family: $font-title;
   font-size: 3em;
   word-break: keep-all;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .menu {
+    font-size: 1em;
+  }
+  .menu-header {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .menu {
+    font-size: .8em;
+  }
+  .menu-header {
+    font-size: 1em;
+  }
 }
