@@ -5,8 +5,8 @@ import oocInfo from '../static/oocInfo';
 
 const OutOfChar = () => {
 
-  const oocList = oocInfo.map(infoItem => {
-    return <TextPage title={infoItem.title} text={infoItem.text} />;
+  const oocList = oocInfo.map((infoItem, index) => {
+    return <TextPage title={infoItem.title} text={infoItem.text} key={index} />;
   });
 
   return (

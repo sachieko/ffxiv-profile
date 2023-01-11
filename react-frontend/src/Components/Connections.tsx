@@ -4,8 +4,8 @@ import './Connections.scss';
 
 const Connections = () => {
 
-  const connectItems = connectInfo.map(item => {
-    return <TextPage title={item.title} text={item.text} subtitle={item.subtitle} />;
+  const connectItems = connectInfo.map((item, index) => {
+    return <TextPage title={item.title} text={item.text} subtitle={item.subtitle} key={index}/>;
   });
 
   return (
