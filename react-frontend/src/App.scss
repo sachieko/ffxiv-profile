@@ -8,17 +8,16 @@
 
 @include bg-color-mixin(menu-to-page-color, $menu-bg-color, $bg-color);
 
-.App {
-  height: 100vh;
+.app {
+  height: 100%;
+  overflow: hidden;
   font-family: $font-regular;
   font-size: 1.5em;
-  overflow: hidden;
-  background-color: $bg-color;
-  background-image: $bg-img;
-  animation: menu-to-page-color 3s;
+  animation: menu-to-page-color 1s;
+  background: url('./img/background1.jpg') no-repeat center center;
+  background-size: cover;
 }
 
-
 .main-content {
-  height: 82%;
+  height: 100%;
 }

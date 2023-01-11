@@ -7,9 +7,10 @@ $font-menu: 'Nothing You Could Do', 'New Tegomin', sans-serif;
 $font-regular: 'Nothing You Could Do', 'New Tegomin', cursive, sans-serif;
 $title-shadow: 2px 2px 2px rgb(0, 205, 205);
 $bg-color: rgba(0, 71, 71, 0.8);
-$bg-fade: rgba(0, 128, 128, 0.4);
+$bg-fade: rgba(0, 132, 184, 0.3);
 $text-color: rgb(214, 214, 214);
 $bg-img: url('../img/white-plaster.png');
+$bg-pic: url('../img/background1.jpg');
 
 $scrollbar-thumb: rgb(35, 35, 35);
 $scrollbar-track: grey;
@@ -18,12 +19,12 @@ $scrollbar-hover: rgb(87, 40, 122);
 // $placeholder-img: url('../img/test1.jpg'); // Used for testing image
 
 // Profile Variables
-$profile-bg: linear-gradient($bg-fade, $bg-fade), no-repeat center/100% url('../img/background1.jpg');
+$profile-bg: linear-gradient($bg-fade, $bg-fade), no-repeat center/100%;
 $profile-pic: url('../img/profilepic1.jpg');
 $profile-widget-sh: 2px 2px 2px #000000;
 $profile-text-color: #ffffff;
 $profile-text-sh: 2px 2px 2px #000000;
-$profile-pic-sh: 0px 0px 20px 8px #fe0033; 
+$profile-pic-sh: 0px 0px 20px 8px #6d007c; 
 
 // Menu Variables
 $menu-bg-image: url('../img/soft-circle-scales.png');
@@ -40,16 +41,15 @@ $menu-link-border: 5px ridge rgb(145, 145, 145);
 $gallery-bg-image: url('../img/tapestry.png');
 $image-border: 1px solid #1b1b1b;
 $image-bg-color: teal;
-$image-bg-hover: grey;
 
 // Connect Variables
 $connect-bg-fade: rgba(87, 40, 122, 0.4);
-$connect-bg: linear-gradient($connect-bg-fade, $connect-bg-fade), no-repeat center/100% url('../img/background1.jpg');
+$connect-bg: linear-gradient($connect-bg-fade, $connect-bg-fade), no-repeat center/100%;
 $connect-bg-color: rgba(49, 49, 49, 0.487);
 $connect-title-shadow: 2px 2px 2px rgb(125, 2, 225);
 
 // OOC Variables
 $ooc-bg-fade: rgba(43, 8, 8, 0.4);
-$ooc-bg: linear-gradient($ooc-bg-fade, $ooc-bg-fade), no-repeat center/100% url('../img/background1.jpg');
+$ooc-bg: linear-gradient($ooc-bg-fade, $ooc-bg-fade), no-repeat center/100%;
 $ooc-bg-color: rgba(49, 49, 49, 0.487);
 $ooc-title-shadow: 2px 2px 2px rgb(155, 3, 3);
