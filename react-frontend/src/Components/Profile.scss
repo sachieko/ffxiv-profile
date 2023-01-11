@@ -107,9 +107,16 @@
 
     .widget-menu {
       flex-flow: column nowrap;
+      padding-bottom: 50px;
+      
       .widget {
-        width: 90%;
+        width: 40vw;
+        height: 4em;
       } 
     } 
+
+    span {
+      padding-top: 50px;
+    }
   }
 }
