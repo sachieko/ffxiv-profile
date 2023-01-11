@@ -13,7 +13,7 @@
   background: $profile-bg;
   background-size: 100% auto;
   animation: bg-fadein 1s;
-  overflow: hidden;
+  overflow-y: scroll;
   color: $profile-text-color;
   font-size: 1.3em;
   padding: 2%;
@@ -37,57 +37,79 @@
     align-items: center;
     width: 50%;
     height: 100%;
-    .widget-menu {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-flow: row;
-      flex-wrap: wrap;
-      .widget {
-        display: flex;
-        height: 125px;
-        width: 200px;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0.5em;
-        border: $menu-border;
-        background-color: $menu-link-bg;
-        background-image: $bg-img;
-        text-shadow: $profile-widget-sh;
-        transition: all .2s ease-in-out;
-        &:hover {
-          transform: scale(1.1);
-          text-shadow: $menu-link-hover-sh;
-        }
-      }
-    }
+  }
 
-    .text-page {
+  .widget-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-flow: row wrap;
+    .widget {
       display: flex;
-      flex-direction: column;
+      height: 35%;
+      width: 25%;
+      flex-flow: column;
+      justify-content: center;
       align-items: center;
-      width: 90%;
-      margin: 1%;
       border-radius: 0.5em;
       border: $menu-border;
       background-color: $menu-link-bg;
       background-image: $bg-img;
-      text-shadow: $profile-text-sh;
+      text-shadow: $profile-widget-sh;
       transition: all .2s ease-in-out;
-        &:hover {
-          transform: scale(1.1);
-        }
-      div {
-        padding: 10px;
+      &:hover {
+        transform: scale(1.1);
+        text-shadow: $menu-link-hover-sh;
       }
     }
-
-    span {
-      margin: 2%;
-      font-family: $font-title;
-      font-size: 1.5em;
-      text-shadow: $profile-text-sh;
+  }
+  
+  .text-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 1%;
+    border-radius: 0.5em;
+    border: $menu-border;
+    background-color: $menu-link-bg;
+    background-image: $bg-img;
+    text-shadow: $profile-text-sh;
+    transition: all .2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    div {
+      padding: 10px;
     }
+  }
+  span {
+    margin: 2%;
+    font-family: $font-title;
+    font-size: 1.5em;
+    text-shadow: $profile-text-sh;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .profile {
+    font-size: .8em;
+    flex-direction: column;
+
+    .profile-menu {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .profile {
+
+    .widget-menu {
+      flex-flow: column nowrap;
+      .widget {
+        width: 90%;
+      } 
+    } 
   }
 }

@@ -42,7 +42,7 @@
 
 
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   .menu {
     font-size: 1em;
   }
@@ -51,7 +51,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
 
   .menu {
     font-size: .8em;

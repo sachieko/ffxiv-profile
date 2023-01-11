@@ -8,12 +8,13 @@
   flex-flow: wrap;
   height: 100%;
   padding: 10px;
+  padding-bottom: 50px;
   align-content: flex-start;
   @include custom-scrollbar;
   overflow-y: scroll;
   .img {
     width: 25%;
-    padding: 0.2%;
+    padding: 3px;
     height: auto;
     img {
       max-width: 100%;

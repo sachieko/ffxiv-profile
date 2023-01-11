@@ -6,18 +6,19 @@
   @include custom-scrollbar;
 }
 
+@include bg-color-mixin(menu-to-page-color, $menu-bg-color, $bg-color);
+
 .App {
   height: 100vh;
   font-family: $font-regular;
   font-size: 1.5em;
   overflow: hidden;
-}
-
-@include bg-color-mixin(menu-to-page-color, $menu-bg-color, $bg-color);
-
-.main-content {
-  height: 82%;
   background-color: $bg-color;
   background-image: $bg-img;
   animation: menu-to-page-color 3s;
+}
+
+
+.main-content {
+  height: 82%;
 }
