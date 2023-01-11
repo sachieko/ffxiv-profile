@@ -38,6 +38,7 @@
     left: 0;
     width: 100%;
     height: auto;
+    max-height: 96%;
     background: $image-bg-color repeat $gallery-bg-image;
     img {
       background-color: $image-bg-color;
