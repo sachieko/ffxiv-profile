@@ -1,0 +1,53 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+@include opacity-mixin(connect-fadein, .4, 1);
+
+.connect {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100%;
+  background: $connect-bg;
+  animation: connect-fadein 1s;
+  .text-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 8em;
+    padding: 0.5em;
+    margin: 1%;
+    border-radius: 0.5em;
+    border: $menu-border-light;
+    background-color: $connect-bg-color;
+    color: $text-color;
+    text-shadow: $profile-text-sh;
+    .title {
+      font-size: 1.5em;
+      text-shadow: $connect-title-shadow;
+    }
+    .text {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .connect {
+    overflow-y: scroll;
+    justify-content: center;
+    .text-page {
+      height: auto;
+      width: 90%;
+      .title {
+        font-size: 1.2em;
+      }
+      .text {
+        font-size: 1em;
+      }
+    }
+    padding-bottom: 150px;
+  }
+}

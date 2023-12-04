@@ -1,0 +1,67 @@
+// Animation Mixins
+
+// -> Opcaity mixin. 0 to 1 for fade in
+@mixin opacity-mixin($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      opacity: $from;
+      transition: opacity .5s ease-in;
+      -moz-transition: opacity .5s ease-in;
+      -webkit-transition: opacity .5s ease-in;
+      -o-transition: opacity .5s ease-in;
+    }
+    100% {opacity: $to;}
+  }
+}
+
+// -> BG Color mixin. Color to Color
+@mixin bg-color-mixin($name, $from, $to) {
+  @keyframes #{$name} {
+    from {
+      background-color: $from;
+    }
+    to {
+      background-color: $to;
+    }
+  }
+}
+
+// -> BG image transform animation. Image to image.
+@mixin bgimgswap($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+    background-image: url($from);
+  }
+  50% {
+      background-image: url($from);
+    }
+    100% {
+    background-image: url($to);
+    }
+  }
+}
+
+// Custom Scrollbar
+
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $scrollbar-track;
+    border-radius: 0.4rem;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb;
+    border-radius: 0.4rem;
+  }
+  
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $scrollbar-hover;
+  }
+}

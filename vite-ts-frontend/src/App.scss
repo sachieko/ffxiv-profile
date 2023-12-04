@@ -1,0 +1,23 @@
+@import "./styles/variables.scss";
+@import "./styles/mixins";
+
+* {
+  box-sizing: border-box;
+  @include custom-scrollbar;
+}
+
+@include bg-color-mixin(menu-to-page-color, $menu-bg-color, $bg-color);
+
+.app {
+  height: 100%;
+  overflow: hidden;
+  font-family: $font-regular;
+  font-size: 1.5em;
+  animation: menu-to-page-color 1s;
+  background: url("./img/background1.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.main-content {
+  height: 100%;
+}
