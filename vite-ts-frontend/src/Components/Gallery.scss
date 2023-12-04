@@ -3,7 +3,7 @@
 
 @include opacity-mixin(img-op-anim, 0, 1);
 
-.gallery {
+#gallery {
   display: flex;
   flex-flow: wrap;
   height: 100%;
@@ -59,7 +59,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  .gallery {
+  #gallery {
     .img {
       width: 50%;
     }

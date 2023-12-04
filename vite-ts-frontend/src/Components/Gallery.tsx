@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Gallery.scss";
 import GalleryPicture from "./GalleryPicture";
 
-interface IimageData {
+type IimageData = {
   id: string;
   link: string; // Only this is needed to set the source for the images
   animated: boolean;
@@ -44,7 +44,6 @@ const Gallery = () => {
         Authorization: `Client-ID ${clientID}`,
       },
     };
-    setImages([]);
     axios
       .get(url, config)
       .then((res) => {
@@ -69,7 +68,7 @@ const Gallery = () => {
   });
 
   return (
-    <section className={"gallery"}>
+    <section id={"gallery"}>
       {imgFocus !== null ? (
         <GalleryPicture
           isFocus={true}
