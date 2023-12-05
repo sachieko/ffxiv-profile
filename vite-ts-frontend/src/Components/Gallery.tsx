@@ -87,6 +87,7 @@ const Gallery = () => {
           return img.link;
         });
         setImages(imageStrings);
+        setPercent(5);
       })
       .catch((err) => console.log(err));
   }, []);
