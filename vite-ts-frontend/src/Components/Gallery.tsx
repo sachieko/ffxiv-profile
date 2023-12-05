@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import "./Gallery.scss";
 import GalleryPicture from "./GalleryPicture";
@@ -30,30 +30,83 @@ type IimageData = {
   account_id?: string;
   account_url?: string;
   vote?: string;
-}
+};
 
 const Gallery = () => {
   const [imgFocus, setImgFocus] = useState<number | null>(null);
   const [images, setImages] = useState<string[]>([]);
 
-  useEffect(() => {
-    const clientID = "ad7b6001aa922b5";
-    const url = "https://api.imgur.com/3/album/yz3qT8r/images";
-    const config = {
-      headers: {
-        Authorization: `Client-ID ${clientID}`,
-      },
-    };
-    axios
-      .get(url, config)
-      .then((res) => {
-        const imageStrings: string[] = res.data.data.map((img: IimageData) => {
-          return img.link;
-        });
-        setImages(imageStrings);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+  const galleryRef = useRef(null);
+  const [mouseDownAt, setMouseDownAt] = useState(0);
+  const [prevPercentage, setPrevPercentage] = useState(0);
+  const [percent, setPercent] = useState(0);
+
+  const handleOnDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    setMouseDownAt(e.clientX);
+  };
+
+  const handleOnUp = () => {
+    setMouseDownAt(0);
+    setPrevPercentage(percent);
+  };
+
+  const handleOnMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (mouseDownAt === 0) return;
+
+    const mouseDelta = mouseDownAt - e.clientX;
+    const maxDelta = window.innerWidth;
+
+    const percentage = (mouseDelta / maxDelta) * -100;
+    const nextPercentageUnconstrained = prevPercentage + percentage;
+    const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+
+    setPercent(nextPercentage);
+
+    if (galleryRef.current) {
+      const transformValue = `translate(${percent}%, -50%)`;
+      galleryRef.current.style.transform = transformValue;
+
+      const images = galleryRef.current.getElementsByClassName('img');
+      for (const image of images) {
+        image.style.objectPosition = `${100 + nextPercentage}% center`;
+      }
+    }
+  };
+
+  const testImgs: string[] = [
+    "/src/static/profilepic1.jpg",
+    "/src/static/profilepic1.jpg",
+    "/src/static/profilepic1.jpg",
+    "/src/static/profilepic1.jpg",
+    "/src/static/profilepic1.jpg",
+    "/src/static/profilepic1.jpg",
+    "/src/static/profilepic1.jpg",
+    "/src/static/profilepic1.jpg",
+    "/src/static/profilepic1.jpg",
+    "/src/static/profilepic1.jpg",
+  ];
+  if (images.length == 0) {
+    setImages(testImgs);
+  }
+
+  // useEffect(() => {
+  //   const clientID = "ad7b6001aa922b5";
+  //   const url = "https://api.imgur.com/3/album/yz3qT8r/images";
+  //   const config = {
+  //     headers: {
+  //       Authorization: `Client-ID ${clientID}`,
+  //     },
+  //   };
+  //   axios
+  //     .get(url, config)
+  //     .then((res) => {
+  //       const imageStrings: string[] = res.data.data.map((img: IimageData) => {
+  //         return img.link;
+  //       });
+  //       setImages(imageStrings);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, []);
 
   const imageList = images.map((image: string, index: number) => {
     return (
@@ -68,18 +121,15 @@ const Gallery = () => {
   });
 
   return (
-    <section id={"gallery"}>
-      {imgFocus !== null ? (
-        <GalleryPicture
-          isFocus={true}
-          setFocus={setImgFocus}
-          img={images[imgFocus]}
-          key={imgFocus}
-          index={imgFocus}
-        />
-      ) : (
-        imageList
-      )}
+    <section
+      ref={galleryRef}
+      id={"gallery"}
+      onMouseDown={handleOnDown}
+      onMouseMove={handleOnMove}
+      onMouseUp={handleOnUp}
+      onMouseLeave={handleOnUp}
+    >
+      {imageList}
     </section>
   );
 };
