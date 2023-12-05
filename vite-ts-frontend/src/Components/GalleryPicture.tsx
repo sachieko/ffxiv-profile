@@ -15,12 +15,20 @@ const GalleryPicture = ({
     <>
       {isFocus ? (
         <div className="focus-img" onClick={() => setFocus(null)}>
-          <img src={img} alt="character scene" draggable="false" />
+          <img
+            src={img}
+            alt="character scene"
+            draggable="false"
+          />
         </div>
       ) : (
-        <div className="img" onClick={() => setFocus(index)}>
-          <img src={img} alt="character scene" draggable="false"/>
-        </div>
+        <img
+          className="img"
+          src={img}
+          onClick={() => setFocus(index)}
+          alt="character scene"
+          draggable="false"
+        />
       )}
     </>
   );

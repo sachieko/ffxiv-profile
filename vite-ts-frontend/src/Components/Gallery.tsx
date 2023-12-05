@@ -79,6 +79,7 @@ const Gallery = () => {
         Authorization: `Client-ID ${clientID}`,
       },
     };
+
     axios
       .get(url, config)
       .then((res) => {
@@ -89,6 +90,19 @@ const Gallery = () => {
       })
       .catch((err) => console.log(err));
   }, []);
+
+  useEffect(() => {
+    const images = galleryRef.current?.getElementsByClassName("img");
+
+    if (images) {
+      for (const image of images) {
+        image.animate(
+          { objectPosition: `${100 + percent}% center` },
+          { duration: 1200, fill: "forwards" }
+        );
+      }
+    }
+  }, [percent]);
 
   const imageList = images.map((image: string, index: number) => {
     return (
