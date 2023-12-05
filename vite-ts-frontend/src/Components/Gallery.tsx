@@ -68,8 +68,6 @@ const Gallery = () => {
     if (galleryRef.current) {
       const transformValue = `translate(${percent}%, -50%)`;
       galleryRef.current.style.transform = transformValue;
-
-
     }
   };
 
