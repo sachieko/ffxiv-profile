@@ -15,11 +15,11 @@ const GalleryPicture = ({
     <>
       {isFocus ? (
         <div className="focus-img" onClick={() => setFocus(null)}>
-          <img src={img} alt="character scene" />
+          <img src={img} alt="character scene" draggable="false" />
         </div>
       ) : (
         <div className="img" onClick={() => setFocus(index)}>
-          <img src={img} alt="character scene" />
+          <img src={img} alt="character scene" draggable="false"/>
         </div>
       )}
     </>

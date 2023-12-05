@@ -1,25 +1,21 @@
-interface IconnectItem {
+type IconnectItem = {
   title: string;
   subtitle?: string;
   text?: string;
-}
+};
 
 const connectInfo: IconnectItem[] = [
   {
-    title: "Ornstein Retainer",
-    text: `She is in service to Lord Julien of House Ornstein in Ishgard, and has been known to contract out.`,
+    title: "Family Clan Head",
+    text: `She is now the leader of her family, which operates publically as a mercantile trading organization. The family does not openly admit to underhanded dealings.`,
   },
   {
-    title: "The Bloodsands",
-    text: `She is often watching the fights, or part of them.`,
-  },
-  {
-    title: "The Grindstone",
-    text: `A regular participant when she can be.`,
+    title: "Hingan",
+    text: `She is often roaming Hingashi, particularly parts of Shirogane or Kugane. Most often spotted during a light rain.`,
   },
   {
     title: "Scheduling",
-    text: `I don't often like to schedule RP in advance, if I'm online then PM.`,
+    text: `Message me and I'll let you know if I'm around or can be around.`,
   },
   {
     title: "Future Upgrade",

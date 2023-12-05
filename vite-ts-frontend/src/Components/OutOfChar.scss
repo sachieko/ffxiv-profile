@@ -8,7 +8,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
   overflow-y: hidden;
   background: $ooc-bg;
   animation: ooc-fadein 1s;
@@ -18,6 +17,7 @@
     justify-content: center;
     align-items: center;
     width: 90%;
+    height: auto;
     margin: 1em;
     padding: 0.5em;
     border-radius: 0.5em;
