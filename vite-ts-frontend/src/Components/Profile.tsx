@@ -10,12 +10,12 @@ const Profile = () => {
       <p>
         Race: Raen (Au'ra).<br/>
         Origin: Bukyo, Hingashi.<br/>
-        Duties: Shibata Family, Hingashi. Ornstein Family, Ishgard.<br/>
-        Occupations: Samurai, Ninja.<br/>
+        Duties: Shibata Family, Hingashi.<br/>
+        Occupations: Samurai, Ninja, Reaper.<br/>
         Nicknames: Nagi, Shibata Bread.<br/>
         Description: Confident, Deliberate, Slow to Anger,<br/> Strong-willed.<br/>
         Themes: Cultural Influence, Bushido, Yakuza, Uchi and Soto.<br/>
-        Residence: (TBA)<br/>
+        Residence: Shirogane.<br/>
         <b>Server: Balmung</b><br/>
       </p>
     </div>
