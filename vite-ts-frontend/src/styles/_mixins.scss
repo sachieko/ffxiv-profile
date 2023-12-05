@@ -26,6 +26,11 @@
   }
 }
 
+@keyframes slide-anim {
+  from {transform: translateX(50%);}
+  to {transform: translateX(0%);}
+}
+
 // -> BG image transform animation. Image to image.
 @mixin bgimgswap($name, $from, $to) {
   @keyframes #{$name} {

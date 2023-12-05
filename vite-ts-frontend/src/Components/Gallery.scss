@@ -15,7 +15,10 @@
   left: 20%;
   top: 50%;
   user-select: none;
-  transform: translate(-10%, -50%);
+  transform: translate(0%, -50%);
+  animation-name: slide-anim;
+  animation-duration: 2s;
+
 }
 
 #gallery > .img {
