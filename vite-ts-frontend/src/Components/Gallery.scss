@@ -24,7 +24,7 @@
   object-fit: cover;
   object-position: 100% center;
   border-radius: 2%;
-
+  animation: img-op-anim 1s;
   &:hover {
     border: $image-border;
   }
@@ -47,8 +47,6 @@
   width: 70%;
   height: auto;
   border: $image-border;
-
-
 }
 
 @media only screen and (max-width: 1000px) {
