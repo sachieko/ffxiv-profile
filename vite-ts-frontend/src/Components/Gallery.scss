@@ -52,8 +52,8 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  #gallery {
-    overflow-y: scroll;
-    flex-direction: column;
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
