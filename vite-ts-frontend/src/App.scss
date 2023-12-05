@@ -8,7 +8,7 @@
 
 @include bg-color-mixin(menu-to-page-color, $menu-bg-color, $bg-color);
 
-body {
+body, html {
   overflow-x: hidden;
 }
 
