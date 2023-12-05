@@ -5,9 +5,8 @@
 
 .connect {
   display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
   background: $connect-bg;
   animation: connect-fadein 1s;
   .text-page {
@@ -15,8 +14,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 45%;
-    height: 8em;
+    width: 48%;
+    height: auto;
     padding: 0.5em;
     margin: 1%;
     border-radius: 0.5em;

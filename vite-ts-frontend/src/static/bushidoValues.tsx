@@ -44,13 +44,13 @@ A samurai's ability to adapt is not limited strictly to battle but in all of the
 with people.
 `;
 
-interface Ivalue {
+type Ivalue = {
   [key: string]: string;
-}
+};
 
-interface IbushidoValues {
+type IbushidoValues = {
   [key: string]: Ivalue;
-}
+};
 const bushidoValues: IbushidoValues = {
   meiyo: {
     kanji: meiyoKanji,

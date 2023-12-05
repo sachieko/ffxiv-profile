@@ -7,7 +7,7 @@ $font-menu: 'Nothing You Could Do', 'New Tegomin', sans-serif;
 $font-regular: 'Nothing You Could Do', 'New Tegomin', cursive, sans-serif;
 $title-shadow: 2px 2px 2px rgb(0, 205, 205);
 $bg-color: rgba(0, 71, 71, 0.8);
-$bg-fade: rgba(0, 132, 184, 0.3);
+$bg-fade: rgba(0, 79, 110, 0.3);
 $text-color: rgb(214, 214, 214);
 $bg-img: url('../img/white-plaster.png');
 $bg-pic: url('../img/background1.jpg');
@@ -28,7 +28,7 @@ $profile-pic-sh: 0px 0px 20px 8px #6d007c;
 
 // Menu Variables
 $menu-bg-image: url('../img/soft-circle-scales.png');
-$menu-bg-color: rgb(87, 40, 122);
+$menu-bg-color: rgb(47, 22, 67);
 $menu-link-sh: 2px 2px 2px #000000;
 $menu-link-hover-sh: 2px 2px 2px teal;
 $menu-link-bg: rgba(201, 201, 201, 0.487);
@@ -40,16 +40,18 @@ $menu-link-border: 5px ridge rgb(145, 145, 145);
 // Gallery Variables
 $gallery-bg-image: url('../img/tapestry.png');
 $image-border: 1px solid #1b1b1b;
-$image-bg-color: teal;
+$image-bg-color: rgba(67, 0, 19, 0.303);
 
 // Connect Variables
-$connect-bg-fade: rgba(87, 40, 122, 0.4);
-$connect-bg: linear-gradient($connect-bg-fade, $connect-bg-fade), no-repeat center/100%;
+$connect-bg-fade: rgba(60, 28, 84, 0.4);
+$connect-bg-fade2: rgba(60, 28, 84, 0);
+$connect-bg: linear-gradient($connect-bg-fade, 90%, $connect-bg-fade2);
 $connect-bg-color: rgba(49, 49, 49, 0.487);
 $connect-title-shadow: 2px 2px 2px rgb(125, 2, 225);
 
 // OOC Variables
-$ooc-bg-fade: rgba(43, 8, 8, 0.4);
-$ooc-bg: linear-gradient($ooc-bg-fade, $ooc-bg-fade), no-repeat center/100%;
+$ooc-bg-fade: rgba(100, 68, 42, 0.4);
+$ooc-bg-fade2: rgba(43, 8, 8, 0);
+$ooc-bg: linear-gradient($ooc-bg-fade, 80%, $ooc-bg-fade2);
 $ooc-bg-color: rgba(49, 49, 49, 0.487);
 $ooc-title-shadow: 2px 2px 2px rgb(155, 3, 3);
