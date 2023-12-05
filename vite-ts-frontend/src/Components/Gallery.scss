@@ -14,7 +14,7 @@
   @include custom-scrollbar;
   overflow-y: scroll;
   animation: img-op-anim 2s ease-in;
-  .img {
+  & > .img {
     width: 25%;
     padding: 3px;
     height: auto;
