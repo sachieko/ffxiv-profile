@@ -27,8 +27,8 @@
 }
 
 @keyframes slide-anim {
-  from {transform: translateX(50%);}
-  to {transform: translateX(0%);}
+  from {transform: translate(50%, -50%);}
+  to {transform: translate(0%, -50%);}
 }
 
 // -> BG image transform animation. Image to image.
