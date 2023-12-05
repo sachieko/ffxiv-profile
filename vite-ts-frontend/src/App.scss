@@ -8,6 +8,10 @@
 
 @include bg-color-mixin(menu-to-page-color, $menu-bg-color, $bg-color);
 
+body {
+  overflow-x: hidden;
+}
+
 .app {
   height: 100%;
   overflow: hidden;
