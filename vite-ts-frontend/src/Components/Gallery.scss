@@ -53,10 +53,10 @@
 
 @media only screen and (max-width: 1000px) {
   #gallery {
-    position: relative;
-    top: 0;
-    left: 0;
     flex-direction: column;
+    height: 80%;
+    top: 15%;
+    left: 10vmin;
     overflow-y: scroll;
     transform: none;
     animation-name: none;
@@ -67,5 +67,9 @@
     width: 80vmin;
     height: auto;
     animation: none;
+  }
+
+  .focus-img > img {
+    width: 80vmin;
   }
 }
