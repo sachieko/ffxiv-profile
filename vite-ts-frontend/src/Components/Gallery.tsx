@@ -71,6 +71,25 @@ const Gallery = () => {
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (!imgFocus) return;
+    if (e.key === 'ArrowLeft') {
+      if (imgFocus === 0) {
+        setImgFocus(images.length - 1);
+        return;
+      }
+      setImgFocus(imgFocus - 1);
+    }
+    if (e.key === 'ArrowRight') {
+      if (imgFocus === images.length - 1) {
+        setImgFocus(0);
+        return;
+      }
+      setImgFocus(imgFocus + 1);
+    }
+    return;
+  }
+
   useEffect(() => {
     const clientID = "ad7b6001aa922b5";
     const url = "https://api.imgur.com/3/album/yz3qT8r/images";
@@ -125,6 +144,7 @@ const Gallery = () => {
         onMouseMove={handleOnMove}
         onMouseUp={handleOnUp}
         onMouseLeave={handleOnUp}
+        onKeyDown={handleKeyDown}
       >
         {imageList}
       </section>
