@@ -72,15 +72,16 @@ const Gallery = () => {
   };
 
   const handleKeyDown = (ev: KeyboardEvent) => {
+    console.log(ev.key == "ArrowLeft");
     if (!imgFocus) return;
-    if (ev.key == 'ArrowLeft') {
+    if (ev.key == "ArrowLeft") {
       if (imgFocus === 0) {
         setImgFocus(images.length - 1);
         return;
       }
       setImgFocus(imgFocus - 1);
     }
-    if (ev.key == 'ArrowRight') {
+    if (ev.key == "ArrowRight") {
       if (imgFocus === images.length - 1) {
         setImgFocus(0);
         return;
@@ -88,7 +89,7 @@ const Gallery = () => {
       setImgFocus(imgFocus + 1);
     }
     return;
-  }
+  };
 
   useEffect(() => {
     const clientID = "ad7b6001aa922b5";
@@ -98,7 +99,7 @@ const Gallery = () => {
         Authorization: `Client-ID ${clientID}`,
       },
     };
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
     axios
       .get(url, config)
       .then((res) => {
@@ -109,9 +110,9 @@ const Gallery = () => {
       })
       .catch((err) => console.log(err));
 
-      return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-      }
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   useEffect(() => {
