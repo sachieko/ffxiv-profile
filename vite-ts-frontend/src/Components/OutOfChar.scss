@@ -25,12 +25,10 @@
     background-color: $ooc-bg-color;
     color: $text-color;
     text-shadow: $profile-text-sh;
+    font-size: 1.2em;
     .title {
       font-size: 1.5em;
       text-shadow: $ooc-title-shadow;
-    }
-    .text {
-      font-size: 1.2em;
     }
   }
 }
@@ -39,5 +37,9 @@
   .ooc {
     overflow-y: scroll;
     padding-bottom: 150px;
+  }
+
+  .ooc > .text-page {
+    font-size: 1em;
   }
 }
