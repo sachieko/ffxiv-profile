@@ -72,14 +72,15 @@ const Gallery = () => {
   };
 
   const handleKeyDown = (ev: KeyboardEvent) => {
-    console.log(ev.key == "ArrowLeft");
     if (imgFocus === null) {
       return;
     }
     if (ev.key == "ArrowLeft") {
+      console.log('Left pressed');
       setImgFocus(imgFocus - 1);
     }
     if (ev.key == "ArrowRight") {
+      console.log('Right pressed')
       setImgFocus(imgFocus + 1);
     }
   };
