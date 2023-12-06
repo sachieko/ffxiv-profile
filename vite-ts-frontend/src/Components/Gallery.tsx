@@ -59,8 +59,8 @@ const Gallery = () => {
     const percentage = (mouseDelta / maxDelta) * -100;
     const nextPercentageUnconstrained = prevPercentage + percentage;
     const nextPercentage = Math.max(
-      Math.min(nextPercentageUnconstrained, -100),
-      0
+      Math.min(nextPercentageUnconstrained, 0),
+      -100
     );
 
     setPercent(nextPercentage);
