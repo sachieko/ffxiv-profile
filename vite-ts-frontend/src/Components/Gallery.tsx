@@ -137,7 +137,7 @@ const Gallery = () => {
   });
 
   return (
-    <div className="gallery-bg">
+    <div className="gallery-bg" onKeyUp={handleKeyDown}>
       <section
         ref={galleryRef}
         id={"gallery"}
@@ -145,7 +145,6 @@ const Gallery = () => {
         onMouseMove={handleOnMove}
         onMouseUp={handleOnUp}
         onMouseLeave={handleOnUp}
-        onKeyDown={handleKeyDown}
       >
         {imageList}
       </section>
