@@ -72,6 +72,7 @@ const Gallery = () => {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    console.log(e.key);
     if (!imgFocus) return;
     if (e.key === 'ArrowLeft') {
       if (imgFocus === 0) {
