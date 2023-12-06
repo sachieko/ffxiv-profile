@@ -73,6 +73,7 @@ const Gallery = () => {
 
   const handleKeyDown = (ev: KeyboardEvent) => {
     if (imgFocus === null) {
+      console.log("Leaving early");
       return;
     }
     if (ev.key == "ArrowLeft") {
