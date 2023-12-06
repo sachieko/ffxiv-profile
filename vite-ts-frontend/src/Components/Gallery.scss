@@ -30,8 +30,7 @@
   &:hover {
     border: $image-border;
     cursor: grab;
-    height: 58vmin;
-    width: 42vmin;
+    transform: scale(1.1)
   }
 }
 
