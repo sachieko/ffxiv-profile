@@ -52,8 +52,18 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  body {
-    overflow-x: hidden;
-    overflow-y: hidden;
+  #gallery {
+    position: relative;
+    flex-direction: column;
+    overflow-y: scroll;
+    transform: none;
+    animation-name: none;
+    animation-duration: 0s;
+  }
+
+  #gallery > .img {
+    width: 80vmin;
+    height: auto;
+    animation: none;
   }
 }
