@@ -29,6 +29,9 @@
   animation: img-op-anim 1s;
   &:hover {
     border: $image-border;
+    cursor: grab;
+    height: 58vmin;
+    width: 42vmin;
   }
 }
 
