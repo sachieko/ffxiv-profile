@@ -71,15 +71,6 @@ const Gallery = () => {
     }
   };
 
-  const handleKeyDown = (ev: KeyboardEvent) => {
-    if (ev.key == "ArrowLeft") {
-      console.log(imgFocus);
-    }
-    if (ev.key == "ArrowRight") {
-      console.log(imgFocus)
-    }
-  };
-
   useEffect(() => {
     const clientID = "ad7b6001aa922b5";
     const url = "https://api.imgur.com/3/album/yz3qT8r/images";
@@ -88,7 +79,7 @@ const Gallery = () => {
         Authorization: `Client-ID ${clientID}`,
       },
     };
-    document.addEventListener("keydown", handleKeyDown);
+
     axios
       .get(url, config)
       .then((res) => {
@@ -98,9 +89,7 @@ const Gallery = () => {
         setImages(imageStrings);
       })
       .catch((err) => console.log(err));
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
+
   }, []);
 
   useEffect(() => {
