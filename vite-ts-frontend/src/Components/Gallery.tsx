@@ -54,13 +54,13 @@ const Gallery = () => {
     if (mouseDownAt === 0) return;
 
     const mouseDelta = mouseDownAt - e.clientX;
-    const maxDelta = window.innerWidth;
+    const maxDelta = window.innerWidth * 4;
 
     const percentage = (mouseDelta / maxDelta) * -100;
     const nextPercentageUnconstrained = prevPercentage + percentage;
     const nextPercentage = Math.max(
-      Math.min(nextPercentageUnconstrained, 0),
-      -100
+      Math.min(nextPercentageUnconstrained, -100),
+      0
     );
 
     setPercent(nextPercentage);
