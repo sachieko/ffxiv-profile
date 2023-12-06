@@ -73,22 +73,15 @@ const Gallery = () => {
 
   const handleKeyDown = (ev: KeyboardEvent) => {
     console.log(ev.key == "ArrowLeft");
-    if (!imgFocus) return;
+    if (imgFocus === null) {
+      return;
+    }
     if (ev.key == "ArrowLeft") {
-      if (imgFocus === 0) {
-        setImgFocus(images.length - 1);
-        return;
-      }
       setImgFocus(imgFocus - 1);
     }
     if (ev.key == "ArrowRight") {
-      if (imgFocus === images.length - 1) {
-        setImgFocus(0);
-        return;
-      }
       setImgFocus(imgFocus + 1);
     }
-    return;
   };
 
   useEffect(() => {
@@ -109,7 +102,6 @@ const Gallery = () => {
         setImages(imageStrings);
       })
       .catch((err) => console.log(err));
-
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
