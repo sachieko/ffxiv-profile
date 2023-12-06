@@ -71,17 +71,17 @@ const Gallery = () => {
     }
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    console.log(e.key);
+  const handleKeyDown = (ev: KeyboardEvent) => {
+    console.log(ev.key);
     if (!imgFocus) return;
-    if (e.key === 'ArrowLeft') {
+    if (ev.key === 'ArrowLeft') {
       if (imgFocus === 0) {
         setImgFocus(images.length - 1);
         return;
       }
       setImgFocus(imgFocus - 1);
     }
-    if (e.key === 'ArrowRight') {
+    if (ev.key === 'ArrowRight') {
       if (imgFocus === images.length - 1) {
         setImgFocus(0);
         return;
@@ -99,7 +99,7 @@ const Gallery = () => {
         Authorization: `Client-ID ${clientID}`,
       },
     };
-
+    document.addEventListener('keydown', handleKeyDown);
     axios
       .get(url, config)
       .then((res) => {
@@ -109,6 +109,10 @@ const Gallery = () => {
         setImages(imageStrings);
       })
       .catch((err) => console.log(err));
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+      }
   }, []);
 
   useEffect(() => {
@@ -137,7 +141,7 @@ const Gallery = () => {
   });
 
   return (
-    <div className="gallery-bg" onKeyUp={handleKeyDown}>
+    <div className="gallery-bg">
       <section
         ref={galleryRef}
         id={"gallery"}
